@@ -1,0 +1,15 @@
+node {
+    // Clean workspace before doing anything
+    deleteDir()
+
+    try {
+        stage ('Clone') {
+			 sh "echo 'checkout source code...'"
+            //checkout scm
+			//line
+        }
+		} catch (err) {
+        currentBuild.result = 'FAILED'
+        throw err
+    }
+}
